@@ -1,3 +1,5 @@
+@version 1.0
+@author dovgjm
 
 -- Setup: Paths, item files, functions
 os = reaper.GetOS();
