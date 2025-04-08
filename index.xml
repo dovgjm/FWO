@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index version="1" name="FWO Reapack" commit="a107fda75ec52da4f5425159cda5bbae8c5f5f14">
+  <category name="CBB">
+    <reapack name="CBB.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T21:15:45Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/a107fda75ec52da4f5425159cda5bbae8c5f5f14/CBB/CBB.lua</source>
+      </version>
+    </reapack>
+  </category>
+</index>
