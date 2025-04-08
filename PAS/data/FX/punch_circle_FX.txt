@@ -1,3 +1,6 @@
+-- @version 1.0
+-- @author dovgjm
+
 <TAKEFX
   WNDRECT 261 91 870 502
   SHOW 0
