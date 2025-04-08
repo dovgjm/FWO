@@ -1,0 +1,125 @@
+<TAKEFX
+  WNDRECT 261 91 870 502
+  SHOW 0
+  LASTSEL 0
+  DOCKED 0
+  BYPASS 0 0 0
+  <VIDEO_EFFECT "Video processor" ""
+	<CODE
+        |//@param cr red 1 0 1 0.5 .001
+        |//@param cg green 1 0 1 0.5 .001
+        |//@param cb blue 1 0 1 0.5 .001
+        |//@param ca1 "alpha 1" 1 0 1 0.5 .001
+        |//@param ca2 "alpha 2" 1 0 1 0.5 .001
+        |
+        |function round(v)(floor(v+.5));
+        |//converts offsets (-1 to +1) to absolute pixel values
+        |function rel2abs(x1*,y1*)(y1=(1+y1)*project_h/2;x1=(1+x1)*project_w/2);
+        |
+        |//set drawing coordinates for gfx_polygon()
+        |function set_polycoords(coords)
+        | instance(#coords,is_new_coords,evx,evy,evw,evh,blx,bly,blw,blh,ox,oy,evxBase,evyBase) //public 
+        |  instance(_#ct1,#_ct2)  //private 
+        |  local(minx,miny,maxx,maxy)
+        |(
+        |  //new coordinates? let's register the change
+        |  strcmp(#coords,coords)?(
+        |    #coords=coords; 
+        |    is_new_coords=1;
+        |    sprintf(#_ct1,"%s ",coords); #_ct2="";
+        |    minx=project_w-1;miny=project_h-1;maxx=maxy=0;
+        |    while(match("(%d,%d)%s",#_ct1,x1,y1,#_ct2))(
+        |      #_ct1=#_ct2;
+        |      minx=min(minx,x1); miny=min(miny,y1);
+        |      maxx=max(maxx,x1); maxy=max(maxy,y1);
+        |    );
+        |    evx=evy=0;  //with temp bitmap, 0 is the reference
+        |    blx=max(0,minx); bly=max(0,miny);
+        |    blw=evw=min(project_w,maxx)-blx; blh=evh=min(project_h,maxy)-bly;
+        |    evxBase=blx; evyBase=bly;
+        |  );
+        |);
+        |// same as set_polycoords() but apply translation,rotation and zoom |to base coordinates
+        |function set_polycoords_translated(coords,xoff,yoff,rotation,ox,oy,aspect,zoom)
+        |  instance(_#_ct1,#_ct2,#_ct3)  
+        |  local(x1,y1,r,phi,yasp,xasp)
+        |(
+        |  yasp=aspect<0?abs(aspect)+1:1; xasp=aspect>0?   aspect+1:1;
+        |  sprintf(#_ct1,"%s ",coords); #_ct3=#_ct2="";
+        |  while(match("(%d,%d)%s",#_ct1,x1,y1,#_ct2))(
+        |    #_ct1=#_ct2;
+        |    x1-=ox; y1-=oy;
+        |    r=sqrt(x1^2+y1^2);
+        |    phi=2*atan(y1/(x1+r))+rotation;
+        |    x1=cos(phi)*r*zoom/xasp+xoff+ox; y1=sin(phi)*r*zoom/yasp+yoff+oy; 
+        |    #_ct3+=sprintf(#,"(%d,%d)",x1,y1);
+        |  );
+        |this.set_polycoords(#_ct3);
+        |);
+        |
+        |_refreshNeeded=stabg?0:1; //shape buffering possible on static images only
+        |function _draw_optimized()
+        |  global(_refreshNeeded,colorspace,gfx_r,gfx_g,gfx_b,gfx_a)
+        |  instance(#init_code,#eval_code,blx,bly,blw,blh,_frameBuf,#_oldVals)
+        |  local(r,g,b,a1,a2)
+        |(
+        |  colorspace='RGBA';
+        |  r=gfx_r;g=gfx_g;b=gfx_b;a1=gfx_a;
+        |  strcmp(#_oldVals,#eval_code)||_refreshNeeded?(
+        |    _refreshNeeded=1;
+        |    #_oldVals=#eval_code;
+        |    _frameBuf==0?(
+        |      gfx_set(0,0,0,1,0,-100,1);
+        |      _frameBuf=gfx_img_alloc(blw,blh,1);
+        |    ):(
+        |      gfx_set(0,0,0,1,0,-100,1);
+        |      gfx_img_resize(_frameBuf,blw,blh,1);
+        |    );
+        |    gfx_set(r,g,b,1,0,_frameBuf,0);
+        |    gfx_blit(-1,0, 0,0,blw,blh, blx,bly,blw,blh);
+        |    gfx_evalrect(0,0,blw,blh,#eval_code,0,-100,#init_code);
+        |  );
+        |  gfx_set(r,g,b,a1,0,-1,0);
+        |  gfx_blit(_frameBuf,0, blx,bly,blw,blh);
+        |);
+        |
+        |function gfx_circle(x,y,radius)
+        |  global(_nt,colorspace,gfx_r,gfx_g,gfx_b,gfx_a,gfx_a2,gfx_dest,gfx_mode)
+        |  instance(#init_code,#eval_code,evx,evy,evw,evh,evxBase,evyBase,blx,bly,blw,blh,_frameBuf)
+        |(
+        |  //init graphic engine with the 4 max coordinates
+        |  this.set_polycoords(sprintf(#,"(%d,%d)(%d,%d)(%d,%d)(%d,%d)",
+        |    round(cos(0)*radius+x),round(sin(0)*radius+y),
+        |    round(cos($pi/2)*radius+x),round(sin($pi/2)*radius+y),
+        |    round(cos($pi)*radius+x),round(sin($pi)*radius+y),
+        |    round(cos(3*$pi/2)*radius+x),round(sin(3*$pi/2)*radius+y)));
+        |
+        |  sprintf(#init_code,"_1=%d",evxBase);
+        |  // _3:y1 base _1:x1  _2:y1
+        |  #eval_code=sprintf(#,"
+        | _3=_slice*%d/_slices+%d;\n
+        | ((_1-%d)^2+((_2+_3)-%d)^2)<%d?(r=%f*r+%d;g=%f*g+%d;b=%f*b+%d;a=%d);
+        |(_1+=1)>=%d?(_2+=1;_1=%d);
+        |",
+        |  evh,evyBase, x,y,radius^2,1-gfx_a,gfx_a*gfx_r*255,1-gfx_a,gfx_a*gfx_g*255,1-gfx_a,gfx_a*gfx_b*255,gfx_a2*255,
+        |  evxBase+evw,evxBase);
+        |  this._draw_optimized();
+        |);
+        |
+        |//****************************************************
+        |
+        |input_info(0,project_w,project_h)?(
+        |  gfx_blit(0);  //do no remove
+        |
+        | 
+        |  gfx_set(0,0,0,ca1,0,-1,ca2);
+        |  circ1.gfx_circle(project_w/2,project_h/2+22,232);
+        |  gfx_set(cr,cg,cb,ca1,0,-1,ca2);
+        |  circ1.gfx_circle(project_w/2,project_h/2+22,230);
+        | 
+        |);
+        |
+    >
+	CODEPARM 1.0000000000 0.0000000000 0.0000000000 0.0000000000 0.0000000000 1.0000000000 1.0000000000 1.0000000000 0.0000000000 0.0000000000 0.0000000000 0.0000000000 0.0000000000 0.0000000000 0.0000000000 0.0000000000
+>
+FLOATPOS 0 0 0 0
