@@ -1,3 +1,7 @@
+-- @version 1.0
+-- @author dovgjm
+
+
 function Main()
   -- Setup: Paths, item files, functions
   os = reaper.GetOS();
@@ -11,7 +15,7 @@ function Main()
   ScriptPath = ScriptPath:gsub("[^" .. pathSep .. "]+$", "") -- remove filename
   
   -- local update_streamers = require 'update_streamers'
-  dofile(ScriptPath .. "CA_streamers_lib.lua")
+  dofile(ScriptPath .. "djm_streamers_lib.lua")
   
   ---------------------------------------------------------
 

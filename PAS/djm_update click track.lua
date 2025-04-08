@@ -1,3 +1,6 @@
+-- @version 1.0
+-- @author dovgjm
+
 -- Update click track:
 --
 -- Use markers "C IN" and "C OUT"

@@ -1,3 +1,6 @@
+-- @version 1.0
+-- @author dovgjm
+
 -- TODO package to simplify loading
 
 -- Setup: Paths, item files, functions
@@ -12,7 +15,14 @@ local _,ScriptPath = reaper.get_action_context()
 ScriptPath = ScriptPath:gsub("[^" .. pathSep .. "]+$", "") -- remove filename
 
 -- local update_streamers = require 'update_streamers'
-dofile(ScriptPath .. "CA_streamers_lib.lua")
+dofile(ScriptPath .. "djm_streamers_lib.lua")
+
+---------------------------------------------------------
+
+-- params
+local length = 2
+local color = "yellow"
+local addPunch = true
 
 ---------------------------------------------------------
 
@@ -23,4 +33,4 @@ if reaper.GetPlayState() > 0 then
   position = reaper.GetPlayPosition()
 end
 
-insertPunch(position)
+insertStreamer(position, length, color, addPunch)

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="FWO Reapack" commit="284ea9021acf653338bda478c5f45c309c80db0f">
+<index version="1" name="FWO Reapack" commit="b9951910d6160b6e2f302519b3882964b63b46b5">
   <category name="CBB">
     <reapack name="CBB.lua" type="script">
       <version name="1.0" author="dovgjm" time="2025-04-08T22:09:43Z">
@@ -7,6 +7,16 @@
       </version>
       <version name="1.0.1" author="dovgjm" time="2025-04-08T22:29:36Z">
         <source main="main">https://github.com/dovgjm/FWO/raw/284ea9021acf653338bda478c5f45c309c80db0f/CBB/CBB.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="PAS">
+    <reapack name="CA_streamers_lib.lua" type="script" desc="Streamers and Punches">
+      <version name="0.4" author="Christian Afonso" time="2025-04-08T22:57:31Z">
+        <changelog><![CDATA[+ Restructured scripts: update_streamers_lib contains function, other scripts import and call these
++ Added scripts for single actions: add_punch, add_streamer_[color]_[length] at cursor position (without markers)
++ Added toolbar buttons]]></changelog>
+        <source main="main">https://github.com/dovgjm/FWO/raw/b9951910d6160b6e2f302519b3882964b63b46b5/PAS/CA_streamers_lib.lua</source>
       </version>
     </reapack>
   </category>

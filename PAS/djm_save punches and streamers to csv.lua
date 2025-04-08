@@ -1,3 +1,7 @@
+-- @version 1.0
+-- @author dovgjm
+
+
 -- Setup: Paths, item files, functions
 os = reaper.GetOS();
 if(os == "Win32" or os == "Win64") then
@@ -10,7 +14,7 @@ local _,ScriptPath = reaper.get_action_context()
 ScriptPath = ScriptPath:gsub("[^" .. pathSep .. "]+$", "") -- remove filename
 
 -- local update_streamers = require 'update_streamers'
-dofile(ScriptPath .. "CA_streamers_lib.lua")
+dofile(ScriptPath .. "djm_streamers_lib.lua")
 
 ---------------------------------------------------------
 

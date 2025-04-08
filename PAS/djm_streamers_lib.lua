@@ -1,35 +1,7 @@
---[[
- * ReaScript Name: Streamers and Punches
- * Author: Christian Afonso
- * License: GPL v3
- * Version: 0.4
- * REAPER: 5.0
- * Feedback and bug reports to chr DOT afonso AT gmail DOT com
- * addVideoFX function based on code by eugen2777
---]]
+-- @version 1.0
+-- @author dovgjm
+-- @description PAS
 
---[[
- * Changelog:
- * v0.4
-   + Restructured scripts: update_streamers_lib contains function, other scripts import and call these
-   + Added scripts for single actions: add_punch, add_streamer_[color]_[length] at cursor position (without markers)
-   + Added toolbar buttons
- * v0.3
- * v0.2
-   + Replaced prerendered streamer videos with video effects. Smoother playback and more flexibility
-   + in colors (but still pre-defined palette for now, as colors must be read in/converted
-   + from marker text). Created MIDI items are colored the same as their streamer FX.
-   + Punches stay pre-rendered image, for now (no native circle drawing in video fx).
- * v0.1
-   + Proof of concept: Read markers and add streamer videos (in 4 colors)
-   + and punch images to Streamers/Punches tracks (created if not found).
-   + Existing tracks currently must have video effects "chroma key" for colored 
-   + streamers and "remove black" (really =additive blend) for punches. FX are
-   + created from template files on newly created tracks.
-   + This is a bit hacky, but the best I could come up with using the 
-   + current video effects...
-   + Images/videos currently pre-rendered and read in from fixed data dir.
---]]
 
 -- TODO: Encapsulate in object/namespace
 -- Constants
@@ -41,7 +13,7 @@ frameRate = reaper.TimeMap_curFrameRate(0)
 df = 1 / frameRate
 
 -- global memory
-GMEM_NAME = "CA_Punches_Streamers" --###########################
+GMEM_NAME = "djm_PS" --###########################
 
 function getStartInside()
 	return reaper.GetExtState(GMEM_NAME, "startInside")

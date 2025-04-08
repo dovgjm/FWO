@@ -1,4 +1,7 @@
-GMEM_NAME = "CA_Punches_Streamers"
+-- @version 1.0
+-- @author dovgjm
+
+GMEM_NAME = "djm_PS"
 
 -- setup
 currentValue = reaper.GetExtState(GMEM_NAME, "startInside")

@@ -1,3 +1,6 @@
+-- @version 1.0
+-- @author dovgjm
+
 settings = {
 	-- script settings
 	show_console = false,
