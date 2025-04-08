@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="FWO Reapack" commit="b9951910d6160b6e2f302519b3882964b63b46b5">
+<index version="1" name="FWO Reapack" commit="933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90">
   <category name="CBB">
     <reapack name="CBB.lua" type="script">
       <version name="1.0" author="dovgjm" time="2025-04-08T22:09:43Z">
@@ -11,12 +11,131 @@
     </reapack>
   </category>
   <category name="PAS">
-    <reapack name="CA_streamers_lib.lua" type="script" desc="Streamers and Punches">
-      <version name="0.4" author="Christian Afonso" time="2025-04-08T22:57:31Z">
-        <changelog><![CDATA[+ Restructured scripts: update_streamers_lib contains function, other scripts import and call these
-+ Added scripts for single actions: add_punch, add_streamer_[color]_[length] at cursor position (without markers)
-+ Added toolbar buttons]]></changelog>
-        <source main="main">https://github.com/dovgjm/FWO/raw/b9951910d6160b6e2f302519b3882964b63b46b5/PAS/CA_streamers_lib.lua</source>
+    <reapack name="djm_add custom streamer.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_add%20custom%20streamer.lua</source>
+      </version>
+    </reapack>
+    <reapack name="djm_add flutter.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_add%20flutter.lua</source>
+      </version>
+    </reapack>
+    <reapack name="djm_add green streamer 2s.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_add%20green%20streamer%202s.lua</source>
+      </version>
+    </reapack>
+    <reapack name="djm_add green streamer 3s.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_add%20green%20streamer%203s.lua</source>
+      </version>
+    </reapack>
+    <reapack name="djm_add green streamer custom length.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_add%20green%20streamer%20custom%20length.lua</source>
+      </version>
+    </reapack>
+    <reapack name="djm_add punch.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_add%20punch.lua</source>
+      </version>
+    </reapack>
+    <reapack name="djm_add red streamer 2s.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_add%20red%20streamer%202s.lua</source>
+      </version>
+    </reapack>
+    <reapack name="djm_add red streamer 3s.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_add%20red%20streamer%203s.lua</source>
+      </version>
+    </reapack>
+    <reapack name="djm_add white streamer 2s.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_add%20white%20streamer%202s.lua</source>
+      </version>
+    </reapack>
+    <reapack name="djm_add white streamer 3s.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_add%20white%20streamer%203s.lua</source>
+      </version>
+    </reapack>
+    <reapack name="djm_add yellow streamer 2s.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_add%20yellow%20streamer%202s.lua</source>
+      </version>
+    </reapack>
+    <reapack name="djm_add yellow streamer 3s.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_add%20yellow%20streamer%203s.lua</source>
+      </version>
+    </reapack>
+    <reapack name="djm_load punches and streamers from CSV.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_load%20punches%20and%20streamers%20from%20CSV.lua</source>
+      </version>
+    </reapack>
+    <reapack name="djm_save punches and streamers to csv.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_save%20punches%20and%20streamers%20to%20csv.lua</source>
+      </version>
+    </reapack>
+    <reapack name="djm_show streamers list.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_show%20streamers%20list.lua</source>
+      </version>
+    </reapack>
+    <reapack name="djm_streamer settings disable end inside.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_streamer%20settings%20disable%20end%20inside.lua</source>
+      </version>
+    </reapack>
+    <reapack name="djm_streamer settings disable start inside.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_streamer%20settings%20disable%20start%20inside.lua</source>
+      </version>
+    </reapack>
+    <reapack name="djm_streamer settings enable end inside.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_streamer%20settings%20enable%20end%20inside.lua</source>
+      </version>
+    </reapack>
+    <reapack name="djm_streamer settings enable start inside.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_streamer%20settings%20enable%20start%20inside.lua</source>
+      </version>
+    </reapack>
+    <reapack name="djm_streamer settings toggle end inside.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_streamer%20settings%20toggle%20end%20inside.lua</source>
+      </version>
+    </reapack>
+    <reapack name="djm_streamer settings toggle start inside.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_streamer%20settings%20toggle%20start%20inside.lua</source>
+      </version>
+    </reapack>
+    <reapack name="djm_streamers_lib.lua" type="script" desc="PAS">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_streamers_lib.lua</source>
+      </version>
+    </reapack>
+    <reapack name="djm_update click track.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_update%20click%20track.lua</source>
+      </version>
+    </reapack>
+    <reapack name="djm_update punches and streamers from markers.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_update%20punches%20and%20streamers%20from%20markers.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="PAS/data">
+    <reapack name="settings.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
+        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/data/settings.lua</source>
       </version>
     </reapack>
   </category>
