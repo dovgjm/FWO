@@ -1,6 +1,6 @@
 -- @version 1.0
 -- @author dovgjm
--- @noindex
+-- @provides [nomain] data/FX/punch_circle_FX.txt
 
 <TAKEFX
   WNDRECT 261 91 870 502
