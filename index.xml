@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="FWO Reapack" commit="b1a17e0272fadb4ae4c48dc753c5e408644676a2">
+<index version="1" name="FWO Reapack" commit="684cbf50153d2e4cdc5292494d5af41a4596e434">
   <category name="CBB">
     <reapack name="CBB.lua" type="script">
       <version name="1.0" author="dovgjm" time="2025-04-08T22:09:43Z">
