@@ -1,6 +1,4 @@
--- @version 1.0
--- @author dovgjm
--- @provides [nomain script] streamerFX.txt > data/FX/
+
 
 <FXCHAIN
   WNDRECT 272 227 773 466

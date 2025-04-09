@@ -1,6 +1,4 @@
--- @version 1.0
--- @author dovgjm
--- @provides [nomain script] punchFX.txt > data/FX/
+
 
 <FXCHAIN
   WNDRECT 24 52 655 408

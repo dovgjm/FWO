@@ -1,5 +1,4 @@
--- @version 1.0
--- @author dovgjm
+
 
 -- Update click track:
 --

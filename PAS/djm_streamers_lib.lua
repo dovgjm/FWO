@@ -1,6 +1,34 @@
 -- @version 1.0
 -- @author dovgjm
 -- @description PAS
+-- @metapackage
+-- @provides
+--  [main] djm_add custom streamer.lua
+--  [main] djm_add flutter.lua
+--  [main] djm_add green streamer 2s.lua
+--  [main] djm_add green streamer 3s.lua
+--  [main] djm_add green streamer custom length.lua
+--  [main] djm_add punch.lua
+--  [main] djm_add red streamer 2s.lua
+--  [main] djm_add red streamer 3s.lua
+--  [main] djm_add white streamer 2s.lua
+--  [main] djm_add white streamer 3s.lua
+--  [main] djm_add yellow streamer 2s.lua
+--  [main] djm_add yellow streamer 3s.lua
+--  [main] djm_load punches and streamers from CSV.lua
+--  [main] djm_save punches and streamers to csv.lua
+--  [main] djm_show streamers list.lua
+--  [main] djm_streamer settings disable end inside.lua
+--  [main] djm_streamer settings disable start inside.lua
+--  [main] djm_streamer settings enable end inside.lua
+--  [main] djm_streamer settings enable start inside.lua
+--  [main] djm_streamer settings toggle end inside.lua
+--  [main] djm_streamer settings toggle start inside.lua
+--  [main] djm_update click track.lua
+--  [main] djm_update punches and streamers from markers.lua
+--  [nomain] data/settings.lua
+--  [nomain] data/FX/*.txt
+
 
 
 -- TODO: Encapsulate in object/namespace

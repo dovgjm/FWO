@@ -1,5 +1,4 @@
--- @version 1.0
--- @author dovgjm
+
 
 GMEM_NAME = "djm_PS"
 
