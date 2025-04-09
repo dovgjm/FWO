@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="FWO Reapack" commit="2170dfb8658a6af59beb0471ff9b4b2fbff67283">
+<index version="1" name="FWO Reapack" commit="34e3d5d44ada9130ae5984810fd28b59192fd564">
   <category name="CBB">
     <reapack name="CBB.lua" type="script">
       <version name="1.0" author="dovgjm" time="2025-04-08T22:09:43Z">
@@ -129,35 +129,6 @@
     <reapack name="djm_update punches and streamers from markers.lua" type="script">
       <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
         <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_update%20punches%20and%20streamers%20from%20markers.lua</source>
-      </version>
-    </reapack>
-  </category>
-  <category name="PAS/data">
-    <reapack name="settings.lua" type="script">
-      <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
-        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/data/settings.lua</source>
-      </version>
-    </reapack>
-  </category>
-  <category name="PAS/data/FX">
-    <reapack name="punch_circle_FX.txt" type="midinotenames">
-      <version name="1.0" author="dovgjm" time="2025-04-08T23:43:40Z">
-        <source>https://github.com/dovgjm/FWO/raw/331b8ef39b2199acdc0ffb38a433802d5ab8d6e5/PAS/data/FX/punch_circle_FX.txt</source>
-      </version>
-    </reapack>
-    <reapack name="punchFX.txt" type="midinotenames">
-      <version name="1.0" author="dovgjm" time="2025-04-08T23:47:19Z">
-        <source>https://github.com/dovgjm/FWO/raw/2170dfb8658a6af59beb0471ff9b4b2fbff67283/PAS/data/FX/punchFX.txt</source>
-      </version>
-    </reapack>
-    <reapack name="streamerFX.txt" type="midinotenames">
-      <version name="1.0" author="dovgjm" time="2025-04-08T23:47:19Z">
-        <source>https://github.com/dovgjm/FWO/raw/2170dfb8658a6af59beb0471ff9b4b2fbff67283/PAS/data/FX/streamerFX.txt</source>
-      </version>
-    </reapack>
-    <reapack name="streamerVFX.txt" type="midinotenames">
-      <version name="1.0" author="dovgjm" time="2025-04-08T23:47:19Z">
-        <source>https://github.com/dovgjm/FWO/raw/2170dfb8658a6af59beb0471ff9b4b2fbff67283/PAS/data/FX/streamerVFX.txt</source>
       </version>
     </reapack>
   </category>
