@@ -1,4 +1,5 @@
-
+-- @version 1.0
+-- @author dovgjm
 
 -- Setup ------------------------------------------
 os = reaper.GetOS();
