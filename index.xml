@@ -13,8 +13,8 @@
   <category name="PAS">
     <reapack name="djm_streamers_lib.lua" type="script" desc="PAS">
       <version name="1.0" author="dovgjm" time="2025-04-08T23:27:29Z">
-        <source main="main">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_streamers_lib.lua</source>
-        <source main="main">https://github.com/dovgjm/FWO/raw/8ca03d5baabf2dfff4f64506351bb0c3a2a2eb84/PAS/data/djm_add%20custom%20streamer.lua</source>
+        <source main="main" type="script" file="data/djm_streamers_lib.lua">https://github.com/dovgjm/FWO/raw/933d94ecf9cfc5ce9ec34aa30fb7326c7bc86c90/PAS/djm_streamers_lib.lua</source>
+        <source main="main" type="script" file="data/djm_add custom streamer.lua">https://github.com/dovgjm/FWO/raw/8ca03d5baabf2dfff4f64506351bb0c3a2a2eb84/PAS/data/djm_add%20custom%20streamer.lua</source>
 
         <source main="main">https://github.com/dovgjm/FWO/raw/8ca03d5baabf2dfff4f64506351bb0c3a2a2eb84/PAS/data/djm_add%20flutter.lua</source>
 
@@ -68,7 +68,7 @@
 
         <source main="nomain" type="script" file="data/FX/streamerFX.txt">https://github.com/dovgjm/FWO/raw/b1a17e0272fadb4ae4c48dc753c5e408644676a2/PAS/data/FX/streamerFX.txt</source>
 
-        <source main="nomain" type="script" file="$package/data/FX/streamerVFX.txt">https://github.com/dovgjm/FWO/raw/b1a17e0272fadb4ae4c48dc753c5e408644676a2/PAS/data/FX/streamerVFX.txt</source>
+        <source main="nomain" type="script" file="/data/FX/streamerVFX.txt">https://github.com/dovgjm/FWO/raw/b1a17e0272fadb4ae4c48dc753c5e408644676a2/PAS/data/FX/streamerVFX.txt</source>
       </version>
     </reapack>
   </category>
