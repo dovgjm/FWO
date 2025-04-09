@@ -1,6 +1,6 @@
 -- @version 1.0
 -- @author dovgjm
--- @provides [nomain] $package/data/FX/punch_circle_FX.txt
+-- @provides [nomain] PAS/data/FX/punch_circle_FX.txt
 
 <TAKEFX
   WNDRECT 261 91 870 502
