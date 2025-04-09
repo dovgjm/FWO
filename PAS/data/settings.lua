@@ -1,6 +1,6 @@
 -- @version 1.0
 -- @author dovgjm
--- @noindex
+-- @provides [nomain] .
 
 settings = {
 	-- script settings
