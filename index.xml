@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="FWO Reapack" commit="70be2588b756c3fc6d4b6aaeacb11b486eb5238e">
+<index version="1" name="FWO Reapack" commit="b1a17e0272fadb4ae4c48dc753c5e408644676a2">
   <category name="CBB">
     <reapack name="CBB.lua" type="script">
       <version name="1.0" author="dovgjm" time="2025-04-08T22:09:43Z">
@@ -132,10 +132,32 @@
       </version>
     </reapack>
   </category>
+  <category name="PAS/data">
+    <reapack name="settings.lua" type="script">
+      <version name="1.0" author="dovgjm" time="2025-04-09T00:50:51Z">
+        <source>https://github.com/dovgjm/FWO/raw/b1a17e0272fadb4ae4c48dc753c5e408644676a2/PAS/data/settings.lua</source>
+      </version>
+    </reapack>
+  </category>
   <category name="PAS/data/FX">
     <reapack name="punch_circle_FX.txt" type="midinotenames">
       <version name="1.0" author="dovgjm" time="2025-04-09T00:44:16Z">
         <source file="data/FX/punch_circle_FX.txt">https://github.com/dovgjm/FWO/raw/70be2588b756c3fc6d4b6aaeacb11b486eb5238e/PAS/data/FX/punch_circle_FX.txt</source>
+      </version>
+    </reapack>
+    <reapack name="punchFX.txt" type="midinotenames">
+      <version name="1.0" author="dovgjm" time="2025-04-09T00:50:51Z">
+        <source type="script" file="data/FX/punchFX.txt">https://github.com/dovgjm/FWO/raw/b1a17e0272fadb4ae4c48dc753c5e408644676a2/PAS/data/FX/punchFX.txt</source>
+      </version>
+    </reapack>
+    <reapack name="streamerFX.txt" type="midinotenames">
+      <version name="1.0" author="dovgjm" time="2025-04-09T00:50:51Z">
+        <source type="script" file="data/FX/streamerFX.txt">https://github.com/dovgjm/FWO/raw/b1a17e0272fadb4ae4c48dc753c5e408644676a2/PAS/data/FX/streamerFX.txt</source>
+      </version>
+    </reapack>
+    <reapack name="streamerVFX.txt" type="midinotenames">
+      <version name="1.0" author="dovgjm" time="2025-04-09T00:50:51Z">
+        <source type="script" file="$package/data/FX/streamerVFX.txt">https://github.com/dovgjm/FWO/raw/b1a17e0272fadb4ae4c48dc753c5e408644676a2/PAS/data/FX/streamerVFX.txt</source>
       </version>
     </reapack>
   </category>
