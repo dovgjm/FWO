@@ -1,5 +1,6 @@
 -- @version 1.0
 -- @author dovgjm
+-- @noindex
 
 <TAKEFX
 	WNDRECT 24 52 655 408

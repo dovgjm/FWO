@@ -1,5 +1,6 @@
 -- @version 1.0
 -- @author dovgjm
+-- @noindex
 
 <FXCHAIN
   WNDRECT 272 227 773 466
